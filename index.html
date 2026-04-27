@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوت الأرقام الأمريكية | SMS Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body, h1, h2, p, button {
+            font-family: 'Cairo', 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SMS Virtual Hub</h1>
+        <p>توليد أرقام أمريكية واستقبال رموز التحقق فوراً</p>
+    </header>
+
+    <main class="container">
+        <!-- Generator Card -->
+        <section class="card generator-section">
+            <div class="inbox-header">
+                <h2>توليد رقم جديد</h2>
+            </div>
+            
+            <div class="number-display">
+                <span class="number" id="current-number">+1 (555) 000-0000</span>
+                <span class="status"><i class="fas fa-circle-check"></i> الرقم نشط الآن</span>
+            </div>
+
+            <button class="btn btn-primary" id="generate-btn">
+                <i class="fas fa-random"></i>
+                توليد رقم عشوائي
+            </button>
+
+            <div style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-dim);">
+                <p><i class="fas fa-info-circle"></i> يمكنك استخدام هذا الرقم في Gmail، WhatsApp، أو أي خدمة أخرى.</p>
+            </div>
+        </section>
+
+        <!-- Inbox Card -->
+        <section class="card inbox-section">
+            <div class="inbox-header">
+                <h2>الرسائل الواردة (SMS)</h2>
+                <div class="refresh-indicator">
+                    <div class="refresh-dot"></div>
+                    تحديث تلقائي...
+                </div>
+            </div>
+
+            <div class="messages-list" id="messages-container">
+                <!-- Messages will be injected here -->
+                <div class="empty-state" id="empty-state">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <p>لا توجد رسائل حالياً. بانتظار وصول رمز التحقق...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SMS Virtual Hub - نظام متطور لإدارة الأرقام الوهمية</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
